@@ -24,11 +24,7 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'qpkorr/vim-bufkill'
 "Plug 'tpope/vim-dispatch'
 Plug 'hashivim/vim-terraform'
-Plug 'cocopon/iceberg.vim'
-Plug 'whatyouhide/vim-gotham'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'dikiaap/minimalist'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
