@@ -39,6 +39,8 @@ bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 bindkey -M vicmd 'H' beginning-of-line
 bindkey -M vicmd 'L' end-of-line
+bindkey -M vicmd 'm' vi-repeat-find
+bindkey -M vicmd 'M' vi-rev-repeat-find
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
@@ -53,6 +55,19 @@ bindkey '^ ' autosuggest-accept
 # Ctrl+Enter execute autosuggestions
 # Requires terminal to rebind ctrl+enter to escape sequence
 bindkey '^[M' autosuggest-execute
+
+# This speeds up pasting w/ autosuggest
+# https://github.com/zsh-users/zsh-autosuggestions/issues/238
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
 
 source $HOME/.shellrc
 
