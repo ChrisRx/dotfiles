@@ -4,59 +4,41 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 stty -ixon # Disable ctrl-s and ctrl-q.
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
-#if [ -f /etc/bash_completion ]; then
-    #. /etc/bash_completion
-#fi
-
-export PATH=~/.npm-global/bin:$PATH
-export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-export PATH=~/.cargo/bin:$PATH
-
-#export PROMPT_COMMAND='history -a; history -r'
 
 export EDITOR=/usr/bin/vim
+export GO111MODULE=on
+export GOPROXY=direct
+export GOSUMDB=off
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
+# Aliases
+alias ll='ls -alFh --group-directories-first'
+if command -v exa >/dev/null; then
+  alias ls='exa'
+  alias ll='ls -alFh --group-directories-first'
+  alias lld='ll -D'
+  alias lt='ll -T -L 2'
+  alias ltd='lt -D'
+fi
 alias e="$EDITOR"
 alias p="sudo pacman"
 alias SS="sudo systemctl"
-if command -v exa >/dev/null; then
-    alias ls='exa'
-    alias ll='ls -alFh --group-directories-first'
-    alias lld='ls -alFhD --group-directories-first'
-    alias lt='ls -lhaFT -L 2 --group-directories-first'
-    alias ltd='ls -lhaFTD -L 2 --group-directories-first'
-else
-    alias ll='ls -alFh --group-directories-first'
-fi
-#alias ll='ls -alFh'
 alias gs='git status'
 alias gd='git diff'
 alias mx='chmod +x'
-alias nst='netstat -tulpn'
-#alias vim="vim --servername vim-$(tmux display -p '#S')"
-alias r="ranger"
-alias sr="sudo ranger"
-alias ka="killall"
-alias g="git"
-
-export GO111MODULE=on
-export TF_VAR_dev_mode=true
-
-#eval "$(starship init bash)"
-
-export GOPROXY=direct
-export GOSUMDB=off
-export PATH=$PATH:/usr/local/kubebuilder/bin
-export PATH=$PATH:$HOME/.linkerd2/bin
-#source <(kubectl completion bash)
-
 alias k='kubectl'
-#complete -F __start_kubectl k
 alias gp='kubectl get pods --all-namespaces'
 alias gn='kubectl get nodes'
 alias gnw='kubectl get nodes -o wide'
 alias si='sudo -i'
 alias dnstools='kubectl run -it --rm --restart=Never --image=infoblox/dnstools:latest dnstools'
 alias jc='journalctl --no-tail -xeu'
+
+# PATH
+export PATH=$HOME/.npm-global/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+if command -v go >/dev/null; then
+  export PATH=$(go env GOPATH)/bin:$PATH
+else
+  export PATH=$GOPATH/bin:$PATH
+fi

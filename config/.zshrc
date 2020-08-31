@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/cmarshall/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
@@ -70,5 +70,8 @@ zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
 source $HOME/.shellrc
+if [ -f $HOME/.securerc ]; then
+  source $HOME/.securerc
+fi
 
 eval "$(starship init zsh)"
