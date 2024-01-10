@@ -3,4 +3,3 @@ config/.vim/plugged/*
 config/.vim/swap/*
 config/.vim/undo/*
 config/.vim/view/*
-config/.securerc

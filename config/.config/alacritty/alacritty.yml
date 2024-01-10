@@ -1,41 +1,44 @@
-background_opacity: 0.8
+env:
+  TERM: xterm-256color
+window:
+  opacity: 0.90
 key_bindings:
   - { key: Return,   mods: Control,        chars: "\x1bM" }
 scrolling:
   history: 50000
 font:
   normal:
-    family: FuraCodeNerdFontMono
-  size: 11.0
+    family: FiraCodeNerdFontMono
+  size: 12.0
 colors:
-  #primary:
-    #background: '0x212121'
-    #foreground: '0xc0c5ce'
-    #bright_foreground: '0xf3f4f5'
+  primary:
+    background: '0x101010'
+    # foreground: '0xc0c5ce'
+    # bright_foreground: '0xf3f4f5'
 
   cursor:
     text: '0x212121'
     cursor: '0xc0c5ce'
 
-  normal:
-    black:   '0x212121'
-    red:     '0xe57373'
-    green:   '0xa6bc69'
-    yellow:  '0xfac863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0xc0c5ce'
-
-  bright:
-    black:   '0x5c5c5c'
-    red:     '0xe57373'
-    green:   '0xa6bc69'
-    yellow:  '0xfac863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0xf3f4f5'
+  # normal:
+  #   black:   '0x212121'
+  #   red:     '0xe57373'
+  #   green:   '0xa6bc69'
+  #   yellow:  '0xfac863'
+  #   blue:    '0x6699cc'
+  #   magenta: '0xc594c5'
+  #   cyan:    '0x5fb3b3'
+  #   white:   '0xc0c5ce'
+  #
+  # bright:
+  #   black:   '0x5c5c5c'
+  #   red:     '0xe57373'
+  #   green:   '0xa6bc69'
+  #   yellow:  '0xfac863'
+  #   blue:    '0x6699cc'
+  #   magenta: '0xc594c5'
+  #   cyan:    '0x5fb3b3'
+  #   white:   '0xf3f4f5'
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 

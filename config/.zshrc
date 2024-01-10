@@ -70,8 +70,5 @@ zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
 source $HOME/.shellrc
-if [ -f $HOME/.securerc ]; then
-  source $HOME/.securerc
-fi
 
 eval "$(starship init zsh)"

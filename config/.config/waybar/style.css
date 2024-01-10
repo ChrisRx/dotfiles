@@ -1,0 +1,78 @@
+/*
+
+██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+
+Waybar Config File by Arfan Zubi
+
+*/
+
+@import '../../.cache/wal/colors-waybar.css';
+
+* {
+    font-family: 'FiraCode Nerd Font', sans-serif;
+    font-size: 22px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+
+#window {
+}
+
+#workspaces {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#workspaces button {
+    border: none;
+    border-radius: 0;
+    color: @foreground;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background: alpha(@color6, .6);
+    color: @cursor;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.focused {
+    background: alpha(@color6, .6);
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: alpha(@color2, .8);
+    border: none;
+    color: @foreground;
+}
+
+#window,
+#mode,
+#clock,
+#battery,
+#disk,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-wlogout,
+#tray,
+#mode {
+    padding: 0 10px;
+    margin: 2px 5px;
+    background-color: alpha(mix(alpha(@background, .5), @color3, 0.7), 0.5);
+    color: @foreground;
+    border-radius: 3px 10px 3px 10px;
+    border-radius: 10px;
+}

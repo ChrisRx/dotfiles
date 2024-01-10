@@ -31,7 +31,7 @@ alt + @space
 
 # screenshot
 Print
-	scrot
+	maim -s | xclip -selection clipboard -t image/png
 
 # make sxhkd reload its configuration files:
 super + Escape

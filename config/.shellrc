@@ -13,8 +13,8 @@ export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 # Aliases
 alias ll='ls -alFh --group-directories-first'
-if command -v exa >/dev/null; then
-  alias ls='exa'
+if command -v eza >/dev/null; then
+  alias ls='eza'
   alias ll='ls -alFh --group-directories-first'
   alias lld='ll -D'
   alias lt='ll -T -L 2'
@@ -33,6 +33,7 @@ alias gnw='kubectl get nodes -o wide'
 alias si='sudo -i'
 alias dnstools='kubectl run -it --rm --restart=Never --image=infoblox/dnstools:latest dnstools'
 alias jc='journalctl --no-tail -xeu'
+alias vim=nvim
 
 # PATH
 export PATH=$HOME/.npm-global/bin:$PATH

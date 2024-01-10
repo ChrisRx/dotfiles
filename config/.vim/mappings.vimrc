@@ -58,8 +58,8 @@ vnoremap <silent> <leader>a :Tabularize /=<CR>
 nnoremap <Leader>a :cclose<CR>
 
 " <3 Yank, Comment, and Paste <3
-nnoremap <silent> <Leader>cz yy:call NERDComment(1, "toggle")<CR>p
-vnoremap <silent> <Leader>cz Ygv:call NERDComment(1, "toggle")<CR>`>p
+nnoremap <silent> <Leader>cz yy:call nerdcommenter#Comment(1, "toggle")<CR>p
+vnoremap <silent> <Leader>cz Ygv:call nerdcommenter#Comment(1, "toggle")<CR>`>p
 
 map <C-n> :NERDTreeToggle<CR>
 noremap <Leader>f :NERDTreeFind<cr>

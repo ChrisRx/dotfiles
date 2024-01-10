@@ -1,52 +1,52 @@
 #add_newline = false
 
-[line_break]
+#[line_break]
+##disabled = true
+
+#[directory]
+#truncation_length = 8
+
+#[golang]
+#symbol = " "
+
+#[aws]
+#style = "bold blue"
+#symbol = " "
+#displayed_items = "region"
+
+#[aws.region_aliases]
+#ap-southeast-2 = "au"
+#us-east-1 = "va"
+
+#[kubernetes]
+#symbol = "⛵ "
+#style = "blue"
 #disabled = true
+##disabled = false
 
-[directory]
-truncation_length = 8
+#[git_branch]
+#symbol = " "
 
-[golang]
-symbol = " "
+#[git_status]
+#conflicted = "🏳"
+##ahead = "🏎💨"
+#behind = "😰"
+#diverged = "😵"
+#stashed = "📦"
+#staged.value = "++"
+#staged.style = "green"
+#staged_count.enabled = true
+#staged_count.style = "green"
+##renamed = "👅"
+#deleted = "🗑"
+#modified_count = true
+#show_sync_count = true
+##modified = "📝"
+##untracked = "🤷‍"
 
-[aws]
-style = "bold blue"
-symbol = " "
-displayed_items = "region"
+#[ruby]
+#symbol = " "
 
-[aws.region_aliases]
-ap-southeast-2 = "au"
-us-east-1 = "va"
-
-[kubernetes]
-symbol = "⛵ "
-style = "blue"
-disabled = true
-#disabled = false
-
-[git_branch]
-symbol = " "
-
-[git_status]
-conflicted = "🏳"
-#ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-stashed = "📦"
-staged.value = "++"
-staged.style = "green"
-staged_count.enabled = true
-staged_count.style = "green"
-#renamed = "👅"
-deleted = "🗑"
-modified_count = true
-show_sync_count = true
-#modified = "📝"
-#untracked = "🤷‍"
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-#symbol = "🦀"
+#[rust]
+#symbol = " "
+##symbol = "🦀"

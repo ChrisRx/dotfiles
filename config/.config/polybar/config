@@ -18,7 +18,7 @@ alert = #bd2c40
 
 [bar/default]
 width = 100%
-height = 80
+height = 60
 radius = 0.0
 fixed-center = false
 dpi = 192
@@ -41,8 +41,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 5
 
-font-0 = FontAwesome:pixelsize=14;4
-font-1 = FuraCodeNerdFontMono:size=11;2
+font-0 = FuraCodeNerdFontMono:size=12;2
+font-1 = FuraCodeNerdFontMono:size=14;2
 ;font-2 = Wuncon Siji:pixelsize=10;0
 
 modules-left = bspwm
@@ -328,15 +328,15 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 0
 
-[module/vpn-openvpn-status]
-type = custom/script
-exec = ~/.config/polybar/scripts/vpn-openvpn-status.sh
-click-left = ~/.config/polybar/scripts/vpn-openvpn-toggle.sh
-interval = 5
-format-underline = #268bd2
-;format-prefix = "🖧 "
-;format-prefix = " "
-;format-prefix = " "
-format-prefix-foreground = #5b
+;[module/vpn-openvpn-status]
+;type = custom/script
+;exec = ~/.config/polybar/scripts/vpn-openvpn-status.sh
+;click-left = ~/.config/polybar/scripts/vpn-openvpn-toggle.sh
+;interval = 5
+;format-underline = #268bd2
+;;format-prefix = "🖧 "
+;;format-prefix = " "
+;;format-prefix = " "
+;format-prefix-foreground = #5b
 
 ; vim:ft=gitconfig
