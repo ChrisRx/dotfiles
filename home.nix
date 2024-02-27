@@ -1,22 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "chris";
   home.homeDirectory = "/home/chris";
+  home.stateVersion = "23.11";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "23.11"; # Please read the comment before changing.
-
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = with pkgs; [
     # General
     ripgrep
@@ -49,7 +37,6 @@
     (google-cloud-sdk.withExtraComponents [
       google-cloud-sdk.components.gke-gcloud-auth-plugin
     ])
-    # awscli
     awscli2
     azure-cli
     terraform
@@ -61,8 +48,6 @@
     tilt
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
     ".config/alacritty/alacritty.yml".source = files/alacritty/alacritty.yml;
     ".config/alacritty/catppuccin_macchiato.yaml".source = files/alacritty/catppuccin_macchiato.yaml;
@@ -81,7 +66,7 @@
     };
 
     ".curlrc".text = ''
-    -w \n
+      -w \n
     '';
   };
 
@@ -106,13 +91,13 @@
       enableCompletion = true;
 
       completionInit = ''
-      autoload -U compinit
-      zstyle ':completion:*' menu select
-      zmodload zsh/complist
-      compinit
+        autoload -U compinit
+        zstyle ':completion:*' menu select
+        zmodload zsh/complist
+        compinit
 
-      # Include hidden files in autocomplete:
-      _comp_options+=(globdots)
+        # Include hidden files in autocomplete:
+        _comp_options+=(globdots)
       '';
 
       oh-my-zsh = {
@@ -133,7 +118,7 @@
         enable = true;
       };
       initExtra = ''
-      source $HOME/.zshrc.extra
+        source $HOME/.zshrc.extra
       '';
     };
 
