@@ -1,0 +1,22 @@
+import:
+ - ~/.config/alacritty/catppuccin_macchiato.yaml
+env:
+  TERM: xterm-256color
+window:
+  opacity: 0.90
+  startup_mode: Maximized
+  decorations: None
+key_bindings:
+  - { key: Return,   mods: Control,        chars: "\x1bM" }
+scrolling:
+  history: 50001
+font:
+  normal:
+    family: FiraCodeNerdFontMono
+  size: 12.0
+colors:
+  primary:
+    background: '0x101010'
+  cursor:
+    text: '0x212121'
+    cursor: '0xc0c5ce'

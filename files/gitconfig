@@ -1,0 +1,10 @@
+[credential]
+	helper = cache
+[pull]
+	ff = only
+[user]
+	name = Chris Marshall
+[includeIf "gitdir:~/src/ChrisRx/"]
+	path = ~/.gitconfig-default
+[includeIf "gitdir:~/src/censys/"]
+	path = ~/.gitconfig-censys

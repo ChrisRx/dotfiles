@@ -1,0 +1,4 @@
+[whitelist]
+# TODO(chrism): for some reason ~ doesn't expand properly, might be older
+# version 2.25.2 on popos not supporting it
+prefix = [ "~/src/ChrisRx" ]

@@ -1,6 +1,5 @@
 install:
-	@stow -vS --no-folding config
-	@fc-cache
+	@stow -vS . -t ~/.config/home-manager
 
 clean:
-	@stow -vD --no-folding config
+	@stow -vD . -t ~/.config/home-manager

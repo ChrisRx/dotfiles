@@ -1,0 +1,13 @@
+[credential]
+	helper = cache
+[pull]
+	ff = only
+[user]
+	name = Chris Marshall
+	email = cmarshall@censys.com
+[url "ssh://git@github.com/censys/"]
+	insteadOf = https://github.com/censys/
+[url "https://"]
+	insteadOf = git://
+[init]
+	defaultBranch = main

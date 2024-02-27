@@ -1,0 +1,11 @@
+[credential]
+	helper = cache
+[pull]
+	ff = only
+[user]
+	name = Chris Marshall
+	email = chris@couch.life
+[url "https://"]
+	insteadOf = git://
+[init]
+	defaultBranch = main

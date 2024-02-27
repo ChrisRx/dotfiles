@@ -1,0 +1,38 @@
+import = [
+    "~/.config/alacritty/themes/catpuccin_mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+opacity = 0.9
+startup_mode = "Maximized"
+decorations = "None"
+
+
+# [[keyboard.bindings]]
+# chars = '\x1bM'
+# key = "Return"
+# mods = "Control"
+
+[keyboard]
+bindings = [
+	{ chars = "\x1bM", key = "Return", mods = "Control" },
+]
+
+[scrolling]
+history = 50000
+
+[font]
+size = 12.0;
+
+[font.normal]
+family = "FiraCodeNerdFontMono"
+
+[colors.primary]
+background = "0x101010"
+
+[colors.cursor]
+text = "0x212121"
+cursor = "0xc0c5ce"

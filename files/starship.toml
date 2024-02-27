@@ -1,0 +1,12 @@
+[nix_shell]
+impure_msg = '[impure](bold red)'
+pure_msg = '[pure](bold green)'
+unknown_msg = '[unknown shell](bold yellow)'
+format = 'via [❄️ $state( \($name\))](bold blue) '
+
+
+[kubernetes]
+disabled = false
+
+[golang]
+symbol = " "
